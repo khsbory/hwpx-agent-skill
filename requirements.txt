@@ -1,0 +1,9 @@
+# Core XML creation, editing, validation, and table parsing
+lxml>=4.9
+
+# PDF rendering, page capture, and visual comparison
+PyMuPDF>=1.23
+Pillow>=10.0
+
+# Signature insertion, HWP conversion, and PDF export (Windows + Hancom Office)
+pyhwpx==1.7.2; platform_system == "Windows"

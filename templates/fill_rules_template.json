@@ -1,0 +1,106 @@
+{
+  "text_rules": [
+    {
+      "name": "placeholder_name_korean",
+      "find": "{{name_korean}}",
+      "template": "{name_korean}",
+      "required": false
+    },
+    {
+      "name": "placeholder_email",
+      "find": "{{email}}",
+      "template": "{email}",
+      "required": false
+    },
+    {
+      "name": "placeholder_name_english",
+      "find": "{{name_english}}",
+      "template": "{name_english}",
+      "required": false
+    },
+    {
+      "name": "checkbox_agree",
+      "find": "□ 동의",
+      "value": "☑ 동의",
+      "required": false
+    },
+    {
+      "name": "postal_code_inline",
+      "find": "(우편번호           )",
+      "template": "(우편번호 {postal_code})",
+      "required": false
+    }
+  ],
+  "special_rules": [
+    {
+      "name": "library_id_after_label",
+      "kind": "insert_after_text",
+      "match_text": "회원 아이디",
+      "match_mode": "equals",
+      "target": {
+        "kind": "exact",
+        "value": " "
+      },
+      "template": " {library_id}",
+      "search_limit": 3,
+      "required": false
+    },
+    {
+      "name": "address_after_postal_code",
+      "kind": "insert_after_text",
+      "match_text": "(우편번호",
+      "target": {
+        "kind": "blank"
+      },
+      "template": "  {address}",
+      "search_limit": 5,
+      "required": false
+    },
+    {
+      "name": "phone_after_label",
+      "kind": "insert_after_text",
+      "match_text": "휴대폰",
+      "target": {
+        "kind": "blank",
+        "next_marker_prefix": "*"
+      },
+      "template": " {phone}",
+      "search_limit": 10,
+      "required": false
+    },
+    {
+      "name": "email_after_label",
+      "kind": "insert_after_text",
+      "match_text": "e-mail",
+      "target": {
+        "kind": "blank",
+        "next_marker_prefix": "*"
+      },
+      "template": "{email}",
+      "search_limit": 5,
+      "required": false
+    },
+    {
+      "name": "date_tail_replace",
+      "kind": "replace_fwspace_tail",
+      "contains": "2026년    월     일",
+      "template": "{application_year}년  {application_month}월  {application_day}일",
+      "required": false
+    }
+  ],
+  "signature": {
+    "markers": [
+      "(서명  또는  인)",
+      "(서명 또는 인)",
+      "(인)"
+    ]
+  },
+  "page_guard": {
+    "reference": "",
+    "max_text_delta_ratio": 0.15,
+    "max_paragraph_delta_ratio": 0.25
+  },
+  "preflight": {
+    "minimum_total_replacements": 1
+  }
+}

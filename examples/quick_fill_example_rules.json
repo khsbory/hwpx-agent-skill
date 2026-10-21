@@ -1,0 +1,15 @@
+{
+  "text_rules": [
+    {"find": "{{company_name}}", "template": "{company_name}", "name": "company_name"},
+    {"find": "{{representative}}", "template": "{representative}", "name": "representative"},
+    {"find": "{{date}}", "template": "{date}", "name": "date"},
+    {"find": "{{address}}", "template": "{address}", "name": "address"},
+    {"find": "{{phone}}", "template": "{phone}", "name": "phone"},
+    {"find": "{{email}}", "template": "{email}", "name": "email"},
+    {"find": "{{amount}}", "template": "{amount}", "name": "amount"},
+    {"find": "{{purpose}}", "template": "{purpose}", "name": "purpose"}
+  ],
+  "special_rules": [],
+  "page_guard": {},
+  "preflight": {}
+}

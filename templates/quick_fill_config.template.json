@@ -1,0 +1,96 @@
+{
+  "replacements": [
+    {
+      "name": "name_korean",
+      "find": "한글      ",
+      "replace": "한글   홍길동   ",
+      "required": true
+    },
+    {
+      "name": "name_english",
+      "find": "영문",
+      "replace": "영문  Hong Gil Dong",
+      "required": false
+    },
+    {
+      "name": "checkbox",
+      "find": "□ ",
+      "replace": "☑ ",
+      "required": false
+    }
+  ],
+  "relative_updates": [
+    {
+      "name": "library_id",
+      "anchor": {
+        "match": "equals",
+        "value": "회원 아이디"
+      },
+      "target": {
+        "mode": "next_text_equals",
+        "value": " ",
+        "window": 2
+      },
+      "replace": " sample_user",
+      "required": false
+    },
+    {
+      "name": "address",
+      "anchor": {
+        "match": "contains",
+        "value": "(우편번호"
+      },
+      "target": {
+        "mode": "next_blank",
+        "window": 5
+      },
+      "replace": "  서울시 중구 예시로 100",
+      "required": false
+    },
+    {
+      "name": "phone",
+      "anchor": {
+        "match": "equals",
+        "value": "휴대폰"
+      },
+      "target": {
+        "mode": "next_blank_before_marker",
+        "window": 10,
+        "next_marker_prefix": "*"
+      },
+      "replace": " 010-0000-0000",
+      "required": false
+    },
+    {
+      "name": "email",
+      "anchor": {
+        "match": "equals",
+        "value": "e-mail"
+      },
+      "target": {
+        "mode": "next_blank_before_marker",
+        "window": 5,
+        "next_marker_prefix": "*"
+      },
+      "replace": " user@example.com",
+      "required": false
+    }
+  ],
+  "tail_replacements": [
+    {
+      "name": "page1_date",
+      "element": "fwSpace",
+      "find": "2026년    월     일",
+      "replace": "2026년  1월  25일",
+      "required": false
+    }
+  ],
+  "preflight": {
+    "minimum_total_replacements": 1
+  },
+  "page_guard": {
+    "reference": "",
+    "max_text_delta_ratio": 0.15,
+    "max_paragraph_delta_ratio": 0.25
+  }
+}

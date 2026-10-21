@@ -1,0 +1,58 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.log
+*.tmp
+
+# Virtual environments
+.venv/
+venv/
+.env
+
+# Generated outputs
+*.hwpx
+*.pdf
+*.png
+output/
+input/
+
+# Keep test fixtures (needed for table extraction tests)
+!scripts/table_extract/tests/fixtures/*.hwpx
+
+# Exclude test run artifacts (last_run.txt contains user-specific paths)
+scripts/table_extract/tests/results/
+.hwpx-security-backups/
+
+# Distribution and temporary build artifacts
+dist/
+build/
+*.zip
+
+# Unpacked directories
+*_unpacked/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Keep template files
+!templates/**
+
+# Public synthetic acceptance asset (never a real signature)
+!examples/acceptance/test-signature.png
+
+# Private project coordination, diagnostics and application drafts
+.hermes/
+evidence/
+GOALS.md
+MASTER_PLAN.md
+docs/CODEX_OSS_APPLICATION_DRAFT.md
+RELEASE_STATUS.json
+MANIFEST.sha256
+.env.*

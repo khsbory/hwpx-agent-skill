@@ -1,0 +1,76 @@
+{
+  "page": {
+    "paper": "A4"
+  },
+  "styles": {
+    "title": {
+      "font": "맑은 고딕",
+      "size": 18,
+      "bold": true,
+      "align": "CENTER"
+    },
+    "body": {
+      "font": "맑은 고딕",
+      "size": 11,
+      "align": "LEFT",
+      "line_spacing": 160
+    }
+  },
+  "header_text": "HWPX 공개 검증 예제",
+  "footer_text": "- {page} -",
+  "content": [
+    {
+      "type": "paragraph",
+      "style": "title",
+      "text": "문서 자동화 검증 보고서"
+    },
+    {
+      "type": "paragraph",
+      "style": "body",
+      "text": "가상 자료만 사용하는 기능 검증입니다. 문서 생성·표·줄 간격·쪽 나누기를 확인합니다."
+    },
+    {
+      "type": "table",
+      "rows": 4,
+      "cols": 3,
+      "headers": [
+        "항목",
+        "내용",
+        "상태"
+      ],
+      "data": [
+        [
+          "생성",
+          "한글 문단과 표",
+          "시험"
+        ],
+        [
+          "보존",
+          "반복 문구와 문서 구조",
+          "시험"
+        ],
+        [
+          "검수",
+          "전체 페이지 이미지 확인",
+          "시험"
+        ]
+      ]
+    },
+    {
+      "type": "page_break"
+    },
+    {
+      "type": "paragraph",
+      "style": "title",
+      "text": "두 번째 페이지"
+    },
+    {
+      "type": "paragraph",
+      "style": "body",
+      "text": "각주가 있는 문장[^1] 뒤의 본문도 보존합니다.",
+      "footnotes": {
+        "1": "가상의 각주입니다."
+      }
+    }
+  ]
+}

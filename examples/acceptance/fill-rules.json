@@ -1,0 +1,26 @@
+{
+  "text_rules": [
+    {
+      "name": "name",
+      "find": "{{name}}",
+      "template": "{name}",
+      "required": true
+    },
+    {
+      "name": "contact",
+      "find": "{{contact}}",
+      "template": "{contact}",
+      "required": true
+    },
+    {
+      "name": "purpose",
+      "find": "{{purpose}}",
+      "template": "{purpose}",
+      "required": true
+    }
+  ],
+  "special_rules": [],
+  "preflight": {
+    "minimum_total_replacements": 3
+  }
+}

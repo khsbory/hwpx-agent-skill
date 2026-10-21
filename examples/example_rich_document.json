@@ -1,0 +1,37 @@
+{
+  "page": {
+    "paper": "A4",
+    "orientation": "portrait",
+    "margins": {"top": 20, "bottom": 20, "left": 30, "right": 30}
+  },
+  "header_text": "2026 Q1 Report",
+  "footer_text": "- {page} -",
+  "styles": {
+    "title": {"font": "\ub9d1\uc740 \uace0\ub515", "size": 18, "bold": true, "align": "CENTER", "color": "#000000", "margin_bottom": 5},
+    "heading1": {"font": "\ub9d1\uc740 \uace0\ub515", "size": 14, "bold": true, "align": "LEFT", "color": "#1a1a1a", "margin_top": 5, "margin_bottom": 2},
+    "heading2": {"font": "\ub9d1\uc740 \uace0\ub515", "size": 12, "bold": true, "align": "LEFT", "color": "#333333", "margin_top": 3, "margin_bottom": 2},
+    "body": {"font": "\ub9d1\uc740 \uace0\ub515", "size": 10, "bold": false, "align": "JUSTIFY", "line_spacing": 160}
+  },
+  "content": [
+    {"type": "paragraph", "style": "title", "text": "2026\ub144 1\ubd84\uae30 \uc5c5\ubb34 \ubcf4\uace0\uc11c"},
+    {"type": "paragraph", "style": "body", "text": "\ubcf8 \ubcf4\uace0\uc11c\ub294 2026\ub144 1\ubd84\uae30 \uc8fc\uc694 \uc5c5\ubb34 \uc131\uacfc\uc640 \ud5a5\ud6c4 \uacc4\ud68d\uc744 \uc815\ub9ac\ud55c \ubb38\uc11c\uc785\ub2c8\ub2e4."},
+    {"type": "paragraph", "style": "heading1", "text": "1. \uc8fc\uc694 \uc131\uacfc"},
+    {"type": "paragraph", "style": "body", "text": "\ub9e4\ucd9c \ubaa9\ud45c \ub300\ube44 120% \ub2ec\uc131\ud558\uc600\uc73c\uba70, \uc2e0\uaddc \uace0\uac1d \ud655\ubcf4 300\uac74\uc744 \uae30\ub85d\ud558\uc600\uc2b5\ub2c8\ub2e4."},
+    {"type": "table", "rows": 3, "cols": 4,
+     "headers": ["\uad6c\ubd84", "1\uc6d4", "2\uc6d4", "3\uc6d4"],
+     "data": [
+       ["\ub9e4\ucd9c", "1,000", "1,200", "1,500"],
+       ["\ube44\uc6a9", "800", "900", "1,000"]
+     ],
+     "style": {
+       "header_bg": "#2E5090",
+       "header_font_color": "#FFFFFF",
+       "header_bold": true,
+       "border": "solid",
+       "alt_row_bg": "#F2F2F2"
+     }
+    },
+    {"type": "paragraph", "style": "heading1", "text": "2. \ud5a5\ud6c4 \uacc4\ud68d"},
+    {"type": "paragraph", "style": "body", "text": "2\ubd84\uae30\uc5d0\ub294 \uc2e0\uc81c\ud488 \ucd9c\uc2dc\uc640 \ud574\uc678 \uc2dc\uc7a5 \uc9c4\ucd9c\uc744 \ucd94\uc9c4\ud560 \uc608\uc815\uc785\ub2c8\ub2e4."}
+  ]
+}

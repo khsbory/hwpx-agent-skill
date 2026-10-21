@@ -1,0 +1,7 @@
+{
+  "fields": {
+    "name": "가상 사용자",
+    "contact": "test@example.com",
+    "purpose": "한국어 양식 작성과 가상 서명 삽입 검증"
+  }
+}

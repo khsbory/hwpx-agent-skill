@@ -1,0 +1,26 @@
+{
+  "fields": {
+    "name_korean": "Hong Gil-dong",
+    "name_english": "Hong Gil Dong",
+    "birth_year": "1990",
+    "birth_month": "01",
+    "birth_day": "15",
+    "email": "hong@example.com",
+    "phone": "010-0000-0000",
+    "address": "Seoul, Republic of Korea",
+    "postal_code": "04524",
+    "library_id": "honggildong",
+    "application_year": "2026",
+    "application_month": "03",
+    "application_day": "06"
+  },
+  "signature": {
+    "enabled": false,
+    "dry_run": true,
+    "image_path": ".\\input\\signature.png",
+    "target_output": ".\\output\\form_signed.hwpx",
+    "width_mm": 8,
+    "height_mm": 8,
+    "max_count": 3
+  }
+}

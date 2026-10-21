@@ -1,0 +1,73 @@
+{
+  "page": {
+    "paper": "A4",
+    "margins": {
+      "top": 20,
+      "bottom": 20,
+      "left": 25,
+      "right": 25
+    }
+  },
+  "styles": {
+    "title": {
+      "font": "맑은 고딕",
+      "size": 18,
+      "bold": true,
+      "align": "CENTER"
+    },
+    "body": {
+      "font": "맑은 고딕",
+      "size": 11,
+      "align": "LEFT",
+      "line_spacing": 160
+    }
+  },
+  "content": [
+    {
+      "type": "paragraph",
+      "style": "title",
+      "text": "가상 서비스 이용 신청서"
+    },
+    {
+      "type": "paragraph",
+      "style": "body",
+      "text": "공개 검증 전용 문서입니다. 실존 인물의 개인정보나 실제 서명이 아닙니다."
+    },
+    {
+      "type": "table",
+      "rows": 5,
+      "cols": 2,
+      "col_widths": [
+        25,
+        75
+      ],
+      "data": [
+        [
+          "성명",
+          "{{name}}"
+        ],
+        [
+          "연락처",
+          "{{contact}}"
+        ],
+        [
+          "신청 내용",
+          "{{purpose}}"
+        ],
+        [
+          "동의 사항",
+          "신청 내용 확인에 동의합니다."
+        ],
+        [
+          "서명",
+          "(서명 또는 인)"
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "style": "body",
+      "text": "반복 보존 검사: 신청 내용 확인에 동의합니다."
+    }
+  ]
+}

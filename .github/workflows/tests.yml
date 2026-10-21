@@ -1,0 +1,33 @@
+name: Non-COM tests
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  pure-python:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.12"]
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+      PYTHONUTF8: "1"
+      HWPX_TABLE_TEST_FILE: ""
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install platform-independent test dependencies
+        run: python -m pip install "lxml>=4.9" "PyMuPDF>=1.23" "Pillow>=10.0"
+      - name: Unit and mocked automation regressions (no live COM)
+        run: python -m unittest discover -s scripts/tests -p "test_*.py"
+      - name: Table suites (private real-document fixture intentionally unset)
+        run: python scripts/table_extract/tests/run_all.py

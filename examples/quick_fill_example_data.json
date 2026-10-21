@@ -1,0 +1,10 @@
+{
+  "company_name": "주식회사 테스트",
+  "representative": "홍길동",
+  "date": "2026-03-07",
+  "address": "서울특별시 강남구 테헤란로 123",
+  "phone": "02-1234-5678",
+  "email": "test@example.com",
+  "amount": "1,000,000원",
+  "purpose": "업무용 소프트웨어 구매"
+}
