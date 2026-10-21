@@ -403,7 +403,7 @@ class ExportDocumentToPdfTests(unittest.TestCase):
             temp = Path(temp_dir)
             module = temp / exporter.SECURITY_DLL_NAME
             module.write_bytes(b"dll")
-            with patch.object(security.os, "name", "nt"), patch.dict(
+            with patch.object(security, "os", types.SimpleNamespace(name="nt", path=os.path, environ=os.environ)), patch.dict(
                 sys.modules, {"winreg": fake_winreg}
             ), self.assertRaisesRegex(exporter.ExportError, "rolled back automatically"):
                 security.repair_security_module_registration(module, temp / "backups")

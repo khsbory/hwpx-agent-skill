@@ -35,8 +35,10 @@ def make_hwpx(path: Path, text: str = "(인)") -> None:
         etree.SubElement(run, '{'+ns['hp']+'}t').text = text
     parts['Contents/section0.xml'] = etree.tostring(section_root, xml_declaration=True, encoding='UTF-8')
     with zipfile.ZipFile(path, "w") as archive:
-        for name, data in parts.items():
-            archive.writestr(name, data)
+        archive.writestr('mimetype', parts['mimetype'], compress_type=zipfile.ZIP_STORED)
+        for name in sorted(parts):
+            if name != 'mimetype':
+                archive.writestr(name, parts[name])
 
 
 class FakeHwp:
